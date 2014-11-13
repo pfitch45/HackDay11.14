@@ -1,7 +1,19 @@
 <!-- public/views/nerd.html -->
 
-<div class="jumbotron text-center">
-    <h1>Nerds and Proud</h1>
+<!-- nerd.html is the mark-up for the package entry form-->
 
-    <p>{{ tagline }}</p>
-</div>
+<div class="packageForm">
+	Recipient:<br>
+	<input type="text" class="recipient">
+	Carrier:<br>
+	<input type="radio" name="carrier" value="UPS">UPS<br>
+	<input type="radio" name="carrier" value="USPS">USPS<br>
+	<input type="radio" name="carrier" value="FedEx">FedEX<br>
+	<input type="radio" name="carrier" value="OnTrac">OnTrac<br>
+	<input type="radio" name="carrier" value="DHL">DHL<br>
+	<input type="radio" name="carrier" value="Other">Other<br>
+	<button>Submit</button>
+</div>	
+
+
+<!-- add bootstrap class names -->
