@@ -4,6 +4,12 @@
  	// get data from form view input elements (recipient and carrier)
 
  	// perform an xhr post request to the server's add package endpoint with the data from above
+
+ 	// basically, see if you can utilize packageservice in here.
+
+ 	PackageService.create({
+ 		test: 1
+ 	});
  });
 
 

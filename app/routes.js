@@ -1,6 +1,7 @@
  // app/routes.js
 
 // grab the nerd model we just created + package model
+var path = require('path');
 var Form = require('./models/form');
 
 var Package = require('./models/package_model');
@@ -40,7 +41,7 @@ module.exports = function(app) {
     // route to handle all angular requests
     app.get('*', function(req, res) {
         console.log('serving index!');
-        res.sendfile('./public/index.html'); // load our public/index.html file
+        res.sendFile(path.resolve('./public/index.html')); // load our public/index.html file
     });
 
 };
