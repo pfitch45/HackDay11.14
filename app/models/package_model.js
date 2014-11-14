@@ -29,5 +29,3 @@ module.exports = {
 	}
 };
 
-
-//create get ALL Packages method
