@@ -1,3 +1,2 @@
 // public/js/app.js
-
-angular.module('sampleApp', ['ngRoute', 'appRoute', 'MainCtrl', 'NerdCtrl', 'NerdService']);
+angular.module('ypm', ['ngRoute', 'appRoutes', 'FormCtrl', 'PackageService']);

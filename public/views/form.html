@@ -1,0 +1,21 @@
+<!-- public/views/form.html -->
+
+<!-- form.html is the mark-up for the package entry form-->
+
+<div class="packageForm">
+<form>	
+	Recipient:<br>
+	<input type="recipient" ng-model="recipient" name="recipient" class="recipient" /><br>
+	Carrier:<br>
+	<input ng-model="carrier" type="radio" name="carrier" value="UPS">UPS<br>
+	<input ng-mddel="carrier" type="radio" name="carrier" value="USPS">USPS<br>
+	<input ng-model="carrier" type="radio" name="carrier" value="FedEx">FedEX<br>
+	<input ng-model="carrier" type="radio" name="carrier" value="OnTrac">OnTrac<br>
+	<input ng-model="carrier" type="radio" name="carrier" value="DHL">DHL<br>
+	<input ng-model="carrier" type="radio" name="carrier" value="Other">Other<br>
+	<input type="submit" id="submit" value="Submit" />
+</form>	
+</div>	
+
+
+<!-- add bootstrap class names -->
