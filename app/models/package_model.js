@@ -2,10 +2,13 @@
 
 var mongoose = require('mongoose');
 
-var Package = mongoose.model('Package', {carrier: String, date: String, recepient: String});
+var Package = mongoose.model('Package', {
+	carrier: String, 
+	date: String, 
+	recipient: String
+});
 
 module.exports = {
-
 	getPackages: function (req, res){
 		Package.find({}, function (err, packages){
 			if (err) {
@@ -14,17 +17,14 @@ module.exports = {
 			res.send(packages);
 		});
 	},
-
 	addPackage: function (packageInfo){
 		var packageObj = new Package(packageInfo);
-
 		packageObj.save(function (err){
 			if (err) {
 				return console.error("Could not save package.");
 			} else {
 				console.log("Package saved");
 			}
-			
 		});
 	}
 };

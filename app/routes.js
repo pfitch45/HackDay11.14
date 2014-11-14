@@ -20,18 +20,15 @@ module.exports = function(app) {
 
     app.get('/api/packages/get_all', Package.getPackages);
 
-    // sample api route
-    app.get('/api/nerds', function(req, res) {
-        // use mongoose to get all nerds in the database
-        Nerd.find(function(err, forms) {
-
-            // if there is an error retrieving, send the error. 
-                            // nothing after res.send(err) will execute
-            if (err)
-                res.send(err);
-
-            res.json(forms); // return all nerds in JSON format
-        });
+    app.post('/api/packages/add', function(req, res) {
+        
+        var idata = {
+            recipient: req.body.recipient,
+            carrier  : req.body.carrier
+        };
+        
+        Package.addPackage(idata);
+        res.send([idata]);
     });
 
     // route to handle creating goes here (app.post)

@@ -13,9 +13,10 @@
 	<input ng-model="carrier" type="radio" name="carrier" value="OnTrac">OnTrac<br>
 	<input ng-model="carrier" type="radio" name="carrier" value="DHL">DHL<br>
 	<input ng-model="carrier" type="radio" name="carrier" value="Other">Other<br>
-	<input type="submit" id="submit" value="Submit" />
+
+	<input type="submit" id="submit" value="Submit" ng-click="addPackage(recipient, carrier)" />
 </form>	
 </div>	
 
-
-<!-- add bootstrap class names -->
+<!-- TODO: make a list for the current package data -->
+<!-- hint: use ng-repeat -->
